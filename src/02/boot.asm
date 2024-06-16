@@ -146,4 +146,6 @@ one:
     db "one",10,13,0
 
 times 510-($-$$) db 0
-dw  0xaa55
+;神奇两个一个效果
+;dw  0xaa55
+db 0x55,0xaa
