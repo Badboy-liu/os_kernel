@@ -1,11 +1,19 @@
-BUILD:=E:/project/cpp/os_kernel/src/01
+BUILD:=E:\project\c++\os_kernel/src/01
 
 all:$(BUILD)/build/boot.img
 
-$(BUILD)/build/boot.img:$(BUILD)/boot.asm
+$(BUILD)/build/boot.img:$(BUILD)/add.asm
 	mkdir "$(BUILD)/build"
-	nasm $(BUILD)/boot.asm -o $(BUILD)/build/boot.bin
-	dd if=$(BUILD)/build/boot.bin of=$(BUILD)/build/boot.img seek=0 bs=512 count=1
+	nasm $(BUILD)/add.asm -o $(BUILD)/build/add.bin
+	dd if=$(BUILD)/build/add.bin of=$(BUILD)/build/boot.img seek=0 bs=512 count=1
+
+#$(BUILD)/build/boot.img:$(BUILD)/boot.asm
+#	mkdir "$(BUILD)/build"
+#	nasm $(BUILD)/boot.asm -o $(BUILD)/build/boot.bin
+#	dd if=$(BUILD)/build/boot.bin of=$(BUILD)/build/boot.img seek=0 bs=512 count=1
+
+
+
 
 
 

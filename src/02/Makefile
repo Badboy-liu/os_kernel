@@ -1,4 +1,4 @@
-BUILD:=E:/project/cpp/os_kernel/src/02
+BUILD:=E:/project/c++/os_kernel/src/02
 
 all:$(BUILD)/boot.bin
 
